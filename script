@@ -1,0 +1,7 @@
+console.log(
+    window.innerWidth,
+    window.innerHeight,
+    window.outerHeight,
+    window.outerWidth,
+    window.pageYOffset,
+)
