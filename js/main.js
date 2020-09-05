@@ -33,10 +33,16 @@ const transacoes = [
 ];
 
 let soma;
-transacoes.forEach((e,i)=> {
+transacoes.forEach((transacao,i)=> {
   
-  e[i].valor. 
+  let onlyNumberString = transacao.valor.slice(2);
+
+  //identificar onde esta o numero
+  //excluir tudo antes
+
+
 });
+
 // Retorne uma array com a lista abaixo
 const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
 
