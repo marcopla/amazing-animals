@@ -32,19 +32,21 @@ const transacoes = [
   },
 ];
 
-let soma;
-transacoes.forEach((transacao,i)=> {
-  
+let soma = 0;
+transacoes.forEach(transacao=> {
   let onlyNumberString = transacao.valor.slice(2);
-
-  //identificar onde esta o numero
-  //excluir tudo antes
-
-
+  let onlyNumber = parseInt(onlyNumberString);
+  soma += onlyNumber;
 });
+
+console.log(`Valor total da soma é: ${soma}`);
 
 // Retorne uma array com a lista abaixo
 const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
+
+let transportesArray = transportes.split(';');
+
+console.log(transportesArray);
 
 // Substitua todos os span's por a's
 const html = `<ul>
@@ -52,6 +54,9 @@ const html = `<ul>
                 <li><span>Produtos</span></li>
                 <li><span>Contato</span></li>
               </ul>`;
+
+let arrayHtml = html.split('<span>');
+
 
 // Retorne o último caracter da frase
 const frase = 'Melhor do ano!';
