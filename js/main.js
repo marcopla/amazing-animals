@@ -56,10 +56,15 @@ const html = `<ul>
               </ul>`;
 
 let arrayHtml = html.split('<span>');
+let newHtml = arrayHtml.join('<a>');
+arrayHtml = newHtml.split('</span>');
+newHtml = arrayHtml.join('</a>');
+console.log(newHtml);
 
 
 // Retorne o último caracter da frase
 const frase = 'Melhor do ano!';
+console.log(frase[frase.length -1]);
 
 // Retorne o total de taxas
 const transacoes = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
