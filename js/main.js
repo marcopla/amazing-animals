@@ -68,5 +68,10 @@ console.log(frase[frase.length -1]);
 
 // Retorne o total de taxas
 const transacoes = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
-
-
+let totalTaxas = 0;
+transacoes.forEach((transacao) => {
+  if(transacao.toLowerCase().includes('taxa')){
+    ++totalTaxas;
+  }
+});
+console.log(totalTaxas);
