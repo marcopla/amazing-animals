@@ -32,14 +32,16 @@ const transacoes = [
   },
 ];
 
-let soma = 0;
-transacoes.forEach(transacao=> {
-  let onlyNumberString = transacao.valor.slice(2);
-  let onlyNumber = parseInt(onlyNumberString);
-  soma += onlyNumber;
+let somaTaxa = 0;
+transacoes.forEach(transacao => {
+  if(transacao.descricao.toLocaleLowerCase().includes('taxa')){
+    let onlyNumberString = transacao.valor.slice(2);
+    let onlyNumber = parseInt(onlyNumberString);
+    somaTaxa += onlyNumber;
+  }
 });
 
-console.log(`Valor total da soma é: ${soma}`);
+console.log(`A soma das taxas é: ${somaTaxa}`);
 
 // Retorne uma array com a lista abaixo
 const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
