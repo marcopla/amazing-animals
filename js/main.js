@@ -1,79 +1,42 @@
-const texto1 = 'Bom dia, ';
-const texto2 = 'Como vai você?';
+let valor = 48.49;
+console.log(valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}));
 
-String.concat();
-const texto3 = texto1.concat(texto2, '!!!', ' mais texto.');
+console.log(valor.toLocaleString('en-US', {style: 'currency', currency: 'USD'}));
 
-//Exercícios
+////////Exercícios
 
-// Utilizando o foreach na array abaixo,
-// some os valores de Taxa e os valores de Recebimento
+// Retorne um número aleatório
+// entre 1050 e 2000
 
-const transacoes = [
-  {
-    descricao: 'Taxa do Pão',
-    valor: 'R$ 39',
-  },
-  {
-    descricao: 'Taxa do Mercado',
-    valor: 'R$ 129',
-  },
-  {
-    descricao: 'Recebimento de Cliente',
-    valor: 'R$ 99',
-  },
-  {
-    descricao: 'Taxa do Banco',
-    valor: 'R$ 129',
-  },
-  {
-    descricao: 'Recebimento de Cliente',
-    valor: 'R$ 49',
-  },
-];
+console.log(Math.round(Math.random()* (2000 - 1050 + 1) + 1050));
 
-let somaTaxa = 0;
-transacoes.forEach(transacao => {
-  if(transacao.descricao.toLocaleLowerCase().includes('taxa')){
-    let onlyNumberString = transacao.valor.slice(2);
-    let onlyNumber = parseInt(onlyNumberString);
-    somaTaxa += onlyNumber;
+// Retorne o maior número da lista abaixo
+let min = 9999;
+const numeros = '4, 5, 20, 8, 9';
+let numerosArray = numeros.split(', ');
+
+numerosArray.forEach((numero,index)=> {
+  numerosArray[index] = Number.parseInt(numero);
+  if(numerosArray[index] < min){
+    min = numerosArray[index];
   }
 });
-
-console.log(`A soma das taxas é: ${somaTaxa}`);
-
-// Retorne uma array com a lista abaixo
-const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
-
-let transportesArray = transportes.split(';');
-
-console.log(transportesArray);
-
-// Substitua todos os span's por a's
-const html = `<ul>
-                <li><span>Sobre</span></li>
-                <li><span>Produtos</span></li>
-                <li><span>Contato</span></li>
-              </ul>`;
-
-let arrayHtml = html.split('<span>');
-let newHtml = arrayHtml.join('<a>');
-arrayHtml = newHtml.split('</span>');
-newHtml = arrayHtml.join('</a>');
-console.log(newHtml);
+console.log(`O menor número é: ${min}`);
 
 
-// Retorne o último caracter da frase
-const frase = 'Melhor do ano!';
-console.log(frase[frase.length -1]);
+// Crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
+const listaPrecos = ['R$ 59,99', ' R$ 100,222','R$ 230  ', 'r$  200'];
 
-// Retorne o total de taxas
-const transacoes = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
-let totalTaxas = 0;
-transacoes.forEach((transacao) => {
-  if(transacao.toLowerCase().includes('taxa')){
-    ++totalTaxas;
-  }
-});
-console.log(totalTaxas);
+function limpaPrecos(listaPrecos){
+  let somaPrecos = 0;
+  let arrayPrecos = [];
+  listaPrecos.forEach((preco) => {
+    console.log(Number.parseFloat(preco).toFixed(2));
+    arrayPrecos.push(Number.parseFloat(preco).toFixed(2));
+    somaPrecos += Number.parseFloat(preco).toFixed(2);
+  }); 
+  console.log(arrayPrecos);
+
+}   
