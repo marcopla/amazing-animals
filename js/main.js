@@ -23,3 +23,11 @@ const aulas = [
 ];
 
 const arrayMin = aulas.map((aula) => aula.min);
+
+const numeros = [10, 25, 60, 5, 35, 10];
+
+const maiorValor = numeros.reduce((anterior, atual) => {
+  return anterior < atual ? atual : anterior;
+});
+
+maiorValor; // 60
