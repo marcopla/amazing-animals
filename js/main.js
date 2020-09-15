@@ -31,3 +31,11 @@ const maiorValor = numeros.reduce((anterior, atual) => {
 });
 
 maiorValor; // 60
+
+const frutas = ['Banana', 'Pêra', 'Uva'];
+
+const frutasRight = frutas.reduceRight((acc, fruta) => acc + ' ' + fruta);
+const frutasLeft = frutas.reduce((acc, fruta) => acc + ' ' + fruta);
+
+frutasRight; // Uva Pêra Banana
+frutasLeft; // Banana Pêra Uva
