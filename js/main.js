@@ -54,3 +54,7 @@ const every = frutas.every((item) => {
   return item === 'Uva';
 });
 // false pois nem todos são Uva
+
+const buscaUva = frutas.findIndex((fruta) => {
+  return fruta === 'Uva';
+}); // 2
