@@ -44,3 +44,13 @@ const listaAulas = aulas.reduce((acumulador, atual, index) => {
   acumulador[index] = atual.nome;
   return acumulador;
 }, {});
+
+const temUva = frutas.some((fruta) => {
+  return fruta === 'Uva';
+}); 
+//true
+
+const every = frutas.every((item) => {
+  return item === 'Uva';
+});
+// false pois nem todos são Uva
