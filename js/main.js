@@ -39,3 +39,8 @@ const frutasLeft = frutas.reduce((acc, fruta) => acc + ' ' + fruta);
 
 frutasRight; // Uva Pêra Banana
 frutasLeft; // Banana Pêra Uva
+
+const listaAulas = aulas.reduce((acumulador, atual, index) => {
+  acumulador[index] = atual.nome;
+  return acumulador;
+}, {});
