@@ -23,13 +23,13 @@ const aulas = [
 ];
 
 const arrayMin = aulas.map((aula) => aula.min);
-
+/*
 const numeros = [10, 25, 60, 5, 35, 10];
 
 const maiorValor = numeros.reduce((anterior, atual) => {
   return anterior < atual ? atual : anterior;
 });
-
+*/
 maiorValor; // 60
 
 const frutas = ['Banana', 'Pêra', 'Uva'];
@@ -68,6 +68,7 @@ const buscaUva = frutas.findIndex((fruta) => {
 // com objetos contendo o título, descricao,
 // aulas e horas de cada curso
 
+const cursos = document.querySelectorAll('.curso');
 
 // Retorne uma lista com os
 // números maiores que 100
