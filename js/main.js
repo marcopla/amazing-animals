@@ -29,9 +29,9 @@ const numeros = [10, 25, 60, 5, 35, 10];
 const maiorValor = numeros.reduce((anterior, atual) => {
   return anterior < atual ? atual : anterior;
 });
-*/
-maiorValor; // 60
 
+maiorValor; // 60
+*/
 const frutas = ['Banana', 'Pêra', 'Uva'];
 
 const frutasRight = frutas.reduceRight((acc, fruta) => acc + ' ' + fruta);
@@ -68,7 +68,15 @@ const buscaUva = frutas.findIndex((fruta) => {
 // com objetos contendo o título, descricao,
 // aulas e horas de cada curso
 
-const cursos = document.querySelectorAll('.curso');
+const cursosQuery = document.querySelectorAll('.curso');
+const cursos = Array.from(cursosQuery);
+
+cursos.forEach(curso => {
+  console.log(curso);
+
+});
+
+
 
 // Retorne uma lista com os
 // números maiores que 100
