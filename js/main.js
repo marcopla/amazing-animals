@@ -72,9 +72,15 @@ const cursosQuery = document.querySelectorAll('.curso');
 const cursos = Array.from(cursosQuery);
 
 const objetoCursos = cursos.map(curso => {
-  console.log(curso.innerHTML.slice('<h1>'));
+  
+  const titulo = curso.querySelector('h1').innerText;
+  
+  return {
+    titulo: titulo
+  }
 
 });
+
 
 
 
