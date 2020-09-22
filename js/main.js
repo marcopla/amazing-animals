@@ -71,8 +71,8 @@ const buscaUva = frutas.findIndex((fruta) => {
 const cursosQuery = document.querySelectorAll('.curso');
 const cursos = Array.from(cursosQuery);
 
-cursos.forEach(curso => {
-  console.log(curso);
+const objetoCursos = cursos.map(curso => {
+  console.log(curso.innerHTML.slice('<h1>'));
 
 });
 
