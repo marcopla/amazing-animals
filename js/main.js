@@ -5,6 +5,7 @@ function Dom(seletor){
 }
 
 Dom.prototype.ativo = function(classe){
+  console.log(this);
   this.element.classList.add(classe);
 }
 
