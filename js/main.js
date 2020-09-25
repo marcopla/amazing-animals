@@ -11,5 +11,9 @@ Dom.prototype.ativo = function(classe){
 
 const ul = new Dom('ul');
 
-console.log(ul);
-console.log(ul.element);
+const li = {
+  element: document.querySelector('li');
+}
+// console.log(ul);
+// console.log(ul.element);
+ul.ativo.call(li, 'ativo');
