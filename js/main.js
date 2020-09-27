@@ -33,3 +33,18 @@ const arrayLike = {
   2: 'Item 3',
   length: 3
 }
+
+// applay
+
+const li = documen.querySelectorAll('li');
+const arrayLi = Array.from(li);
+
+const filtro = Array.prototype.filter.bind(li, (item) => {
+  return item.classList.contains('ativo');
+});
+
+console.log(filtro());
+
+console.log(li);
+
+const numeros = [33, 232, 33, 323, 32, 232];
