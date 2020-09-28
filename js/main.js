@@ -48,3 +48,13 @@ console.log(filtro());
 console.log(li);
 
 const numeros = [33, 232, 33, 323, 32, 232];
+
+const $ = document.querySelector.bind(document, 'li');
+
+const carro = {
+  marca: 'Ford',
+  ano: 2018,
+  acelerar: function(aceleracao, tempo) {
+    return `${this.marca} acelerou ${aceleracao} em ${tempo} `;
+  }
+}
