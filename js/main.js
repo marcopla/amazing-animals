@@ -58,3 +58,12 @@ const carro = {
     return `${this.marca} acelerou ${aceleracao} em ${tempo} `;
   }
 }
+
+const honda = {
+  marca: 'Honda'
+}
+
+const aceleraHonda = carro.acelerar.bind(honda);
+
+console.log(aceleraHonda(300, 20));
+
