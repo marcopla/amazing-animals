@@ -49,3 +49,4 @@ const caminhao = {
 Object.assign(moto, funcaoAutomovel);
 Object.assign(caminhao, funcaoAutomovel);
 
+Object.defineProperties();
