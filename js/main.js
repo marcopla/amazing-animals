@@ -49,4 +49,19 @@ const caminhao = {
 Object.assign(moto, funcaoAutomovel);
 Object.assign(caminhao, funcaoAutomovel);
 
-Object.defineProperties();
+Object.defineProperties(moto, {
+  rodas: {
+    value: 2,
+    configurable: false, // não pode excluir
+    writeble: true, // pode editar
+    get() {
+      return this._rodas;
+    },
+    set(valor){
+      this._rodas = valor * 4;
+    }
+  }
+});  
+
+delete moto.rodas;
+console.log(moto); 
