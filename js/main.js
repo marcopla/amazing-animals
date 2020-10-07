@@ -65,3 +65,6 @@ Object.defineProperties(moto, {
 
 delete moto.rodas;
 console.log(moto); 
+
+Object.getOwnPropertyDescriptor(Array);
+Object.getOwnPropertyDescriptor(Array.prototype);
