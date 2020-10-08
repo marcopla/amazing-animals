@@ -1,59 +1,64 @@
-const pessoa = new Object({
-  nome: 'Marco',
+// const pessoa = new Object({
+//   nome: 'Marco',
 
-});
+// });
 
-console.log(pessoa);
+// console.log(pessoa);
 
-const carro = {
-  rodas: 4,
-  init(marca){
-    this.marca = marca;
-    return this;
-  },
-  acelerar(){
-    return this.marca + ' acelerou';
-  },
-  buzinar(){
-    return this.marca + ' buzinou';
-  }
-}
+// const carro = {
+//   rodas: 4,
+//   init(marca){
+//     this.marca = marca;
+//     return this;
+//   },
+//   acelerar(){
+//     return this.marca + ' acelerou';
+//   },
+//   buzinar(){
+//     return this.marca + ' buzinou';
+//   }
+// }
 
-const ferrari = Object.create(carro).init('Ferrari');
+// const ferrari = Object.create(carro).init('Ferrari');
 
-//honda.marca = 'Honda';
-//honda.init('Honda')
+// //honda.marca = 'Honda';
+// //honda.init('Honda')
 
-ferrari.acelerar;
+// ferrari.acelerar;
 
-const funcaoAutomovel = {
-  acelerar() {
-    return 'acelerou';
-  },
-  buzinar() {
-    return 'buzinou';
-  },
+// const funcaoAutomovel = {
+//   acelerar() {
+//     return 'acelerou';
+//   },
+//   buzinar() {
+//     return 'buzinou';
+//   },
 
-}
+// }
+
+// const moto = {
+//   //rodas: 2,
+//   capacete: true,
+// };
+
+// const caminhao = {
+//   rodas: 4, 
+//   mala: true,
+// };
+
+// Object.assign(moto, funcaoAutomovel);
+// Object.assign(caminhao, funcaoAutomovel);
 
 const moto = {
-  rodas: 2,
+  //rodas: 2,
   capacete: true,
-};
-
-const caminhao = {
-  rodas: 4, 
-  mala: true,
-};
-
-Object.assign(moto, funcaoAutomovel);
-Object.assign(caminhao, funcaoAutomovel);
+}
 
 Object.defineProperties(moto, {
   rodas: {
-    value: 2,
-    configurable: false, // não pode excluir
-    writeble: true, // pode editar
+    //value: 2,
+   // configurable: false, // não pode excluir
+    //writeble: true, // pode editar
     get() {
       return this._rodas;
     },
@@ -63,8 +68,10 @@ Object.defineProperties(moto, {
   }
 });  
 
-delete moto.rodas;
+//delete moto.rodas;
 console.log(moto); 
 
 Object.getOwnPropertyDescriptor(Array);
-Object.getOwnPropertyDescriptor(Array.prototype);
+//Object.getOwnPropertyDescriptor(Array.prototype);
+
+//Object.keys(moto);
