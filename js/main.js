@@ -56,6 +56,7 @@ const moto = {
 
 Object.defineProperties(moto, {
   rodas: {
+    //enumerable: true,
     //value: 2,
    // configurable: false, // não pode excluir
     //writeble: true, // pode editar
@@ -75,3 +76,14 @@ Object.getOwnPropertyDescriptor(Array);
 //Object.getOwnPropertyDescriptor(Array.prototype);
 
 //Object.keys(moto);
+
+const carro = {
+  marca: 'Honda',
+  ano: 2020,
+}
+
+Object.freeze(carro);
+
+carro.marca = 'Fiat'; // por causa do freeze não foi possível atribuir a marca Fiat.
+
+console.log(carro);
