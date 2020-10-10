@@ -87,3 +87,14 @@ Object.freeze(carro);
 carro.marca = 'Fiat'; // por causa do freeze não foi possível atribuir a marca Fiat.
 
 console.log(carro);
+
+''.constructor;
+moto.constructor;
+
+const frutas = ['Pera', 'Uva', 'Banana'];
+
+Array.hasOwnProperty('map');
+Array.prototype.hasOwnProperty('map');
+
+Object.getOwnPropertyNames(frutas);
+
