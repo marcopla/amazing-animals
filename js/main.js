@@ -98,3 +98,8 @@ Array.prototype.hasOwnProperty('map');
 
 Object.getOwnPropertyNames(frutas);
 
+Array.prototype.isPrototypeOf(frutas);
+
+Array.prototype.isPrototypeOf([]);
+
+frutas.toString();
