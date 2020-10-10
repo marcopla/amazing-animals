@@ -103,3 +103,13 @@ Array.prototype.isPrototypeOf(frutas);
 Array.prototype.isPrototypeOf([]);
 
 frutas.toString();
+
+const somar = function(a, b){
+  return a + b
+}
+
+somar.toString();
+
+carro.toString(); // verifica se é uma string
+
+Object.prototype.toString.call(frutas);
