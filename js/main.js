@@ -119,10 +119,26 @@ Object.prototype.toString.call(frutas);
 // Crie uma função que verifique
 // corretamente o tipo de dado
 
+function verificarDado(dado){
+  return Object.prototype.toString.call(dado);
+}
+
+console.log(verificarDado('a'));
 
 // Crie um objeto quadrado com
 // a propriedade lados e torne
 // ela imutável
+
+const quadrado = {}
+
+Object.defineProperties(quadrado, {
+  lados:{
+    value: 4,
+    enumerable: true,
+  }
+});
+
+console.log(quadrado);
 
 // Previna qualquer mudança
 // no objeto abaixo
@@ -132,6 +148,13 @@ const configuracao = {
   background: '#333'
 }
 
+configuracao.width = 600;
+
+Object.freeze(configuracao); // apenas depois do width
+
 // Liste o nome de todas
 // as propriedades do
 // protótipo de String e Array
+
+console.log(Object.getOwnPropertyNames(Array.prototype));
+console.log(Object.getOwnPropertyNames(String.prototype));
