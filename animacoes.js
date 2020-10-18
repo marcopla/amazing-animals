@@ -1,13 +1,20 @@
-const div = document.querySelector('[data-cor]');
-div.dataset.height = 1000;
-console.log(div.dataset);
-console.log(div.dataset.cor);
+// const div = document.querySelector('[data-cor]');
+// div.dataset.height = 1000;
+// console.log(div.dataset);
+// console.log(div.dataset.cor);
 
-delete div.dataset.width;
+// delete div.dataset.width;
 
 // Adicione um atributo data-anime="show-down" e
 // data-anime="show-right" a todos as section's
 // com descricão dos animais.
+
+let div = document.querySelectorAll('.animais-descricao');
+
+
+div.forEach( (section) =>{
+  section.classList.add()
+});
 
 // Utilizando estes atributos, adicione a classe
 // show-down ou show-right a sua respectiva section
