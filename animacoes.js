@@ -1,27 +1,92 @@
-// const div = document.querySelector('[data-cor]');
-// div.dataset.height = 1000;
-// console.log(div.dataset);
-// console.log(div.dataset.cor);
+function initTabNav() {
+  const tabMenu = document.querySelectorAll('[data-tab="menu"] li');
+  const tabContent = document.querySelectorAll('[data-tab="content"] section');
 
-// delete div.dataset.width;
+  if(tabMenu.length && tabContent.length) {
+    tabContent[0].classList.add('ativo');
 
-// Adicione um atributo data-anime="show-down" e
-// data-anime="show-right" a todos as section's
-// com descricão dos animais.
+    function activeTab(index) {
+      tabContent.forEach((section) => {
+        section.classList.remove('ativo');
+      });
+      const direcao = tabContent[index].dataset.anime;
+      tabContent[index].classList.add('ativo', direcao);
+    }
 
-let div = document.querySelectorAll('.animais-descricao');
+    tabMenu.forEach((itemMenu, index) => {
+      itemMenu.addEventListener('click', () => {
+        activeTab(index);
+      });
+    });
+  }
+}
+initTabNav();
 
+function initAccordion() {
+  const accordionList = document.querySelectorAll('[data-anime="accordion"] dt');
+  const activeClass = 'ativo';
+  
+  if(accordionList.length) {
+    accordionList[0].classList.add(activeClass);
+    accordionList[0].nextElementSibling.classList.add(activeClass);
 
-div.forEach( (section) =>{
-  section.classList.add()
-});
+    function activeAccordion() {
+      this.classList.toggle(activeClass);
+      this.nextElementSibling.classList.toggle(activeClass);
+    }
 
-// Utilizando estes atributos, adicione a classe
-// show-down ou show-right a sua respectiva section
-// assim que a mesma aparecer na tela (animacao tab)
+    accordionList.forEach((item) => {
+      item.addEventListener('click', activeAccordion);
+    });
+  }
+}
+initAccordion();
 
-// No CSS faça com que show-down anime de cima para baixo
-// e show-right continue com a mesma animação da esquerda
-// para a direita
+function initScrollSuave() {
+  const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"]');
 
-// Substitua todas as classes js- por data atributes.
+  function scrollToSection(event) {
+    event.preventDefault();
+    const href = event.currentTarget.getAttribute('href');
+    const section = document.querySelector(href);
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+
+    // forma alternativa
+    // const topo = section.offsetTop;
+    // window.scrollTo({
+    //   top: topo,
+    //   behavior: 'smooth',
+    // });
+  }
+
+  linksInternos.forEach((link) => {
+    link.addEventListener('click', scrollToSection);
+  });
+}
+initScrollSuave();
+
+function initAnimacaoScroll() {
+  const sections = document.querySelectorAll('[data-anime="scroll"]');
+  if(sections.length) {
+    const windowMetade = window.innerHeight * 0.6;
+
+    function animaScroll() {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const isSectionVisible = (sectionTop - windowMetade) < 0;
+        if(isSectionVisible)
+          section.classList.add('ativo');
+        else 
+          section.classList.remove('ativo');
+      })
+    }
+
+    animaScroll();
+
+    window.addEventListener('scroll', animaScroll);
+  }
+}
+initAnimacaoScroll();
