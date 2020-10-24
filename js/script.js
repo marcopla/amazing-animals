@@ -1,10 +1,9 @@
-import initAnimacaoScroll from './modules/animacao-scroll.js';
-import initScrollSuave from './modules/scroll-suave.js'
-import initAnimacaoScroll from './modules/animacao-scroll.js'
-import initAccordion from './modules/accordion.js'
-import initTabNav from './modules/tabnav.js'
+const div = document.querySelector('[data-cor]');
 
-initScrollSuave();
-initAnimacaoScroll();
-initAccordion();
-initTabNav();
+div.dataset.height = 1000;
+
+delete div.dataset.width;
+
+div.dataset.totalHeight = 2000;
+
+console.log(div.dataset)
