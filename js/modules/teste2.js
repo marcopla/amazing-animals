@@ -5,3 +5,5 @@ export function cumprimenta(){
 export function cumprimenta2(){
   console.log('oi 2.1');
 }
+
+export const senha = 3452445;

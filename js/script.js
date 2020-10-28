@@ -19,6 +19,7 @@ teste();
 testando2();
 
 tudo.cumprimenta();
+console.log(tudo.senha);
 
 initScrollSuave();
 initAnimacaoScroll();
