@@ -14,6 +14,8 @@ import initAccordion from './modules/accordion.js';
 import initTabNav from './modules/tabnav.js';
 import {testando as teste, testando2 } from './modules/teste.js';
 import * as tudo from './modules/teste2.js';
+import initModal from './modules/modal.js';
+
 
 teste();
 testando2();
@@ -25,3 +27,4 @@ initScrollSuave();
 initAnimacaoScroll();
 initAccordion();
 initTabNav();
+initModal();
