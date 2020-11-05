@@ -18,7 +18,8 @@ export default function initDropdownMenu (){
 function outsideClick(){
   const html = document.documentElement;
   html.addEventListener('click', handleOutsideClick);
+
   function handleOutsideClick(event){
-    console.log(event);
+    console.log('html');
   }
 }
