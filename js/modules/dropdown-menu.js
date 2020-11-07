@@ -11,17 +11,17 @@ export default function initDropdownMenu (){
   function handleclick(event){
     event.preventDefault();
     this.classList.toggle('active');
-    outsideClick(function(){
+    outsideClick(this, () =>{
      console.log('ativou'); 
     });
   };
 }
 
-function outsideClick(callback){
+function outsideClick(element,callback){
   const html = document.documentElement;
   html.addEventListener('click', handleOutsideClick);
 
   function handleOutsideClick(event){
-    console.log('html');
+    callback();
   }
 }
