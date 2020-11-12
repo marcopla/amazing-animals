@@ -2,14 +2,13 @@ function espera (texto){
   console.log(texto);
 }
 
-setTimeout(espera, 1000, 'espera');
+setTimeout(espera, 1000, 'Testando');
 
 setTimeout(() =>{
-  console.log('Após 0s?');
-});
+  console.log('testando');
+}, 0);
 
-function executa (texto){
-  console.log(texto);
+
+for(let i=0; i < 20 ; i++){
+  console.log(i)
 }
-
-setTimeout(espera2, 1000, 'executa');
