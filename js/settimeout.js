@@ -1,3 +1,31 @@
+const btn = document.querySelector('button');
+btn.addEventListener('click', handleClick);
+
+function handleClick(){
+  setTimeout(function(){
+    this.classList.add('active');
+  });
+}
+
+
+let contarAte10 = setInterval(callback, 1000);
+
+let = 0;
+
+function callback(){
+  console.log(i++);
+  if(i > 10){
+    clearInterval(contarAte10);
+  }
+}
+
+
+/*
+function handleClick(){
+  console.log(this);
+  this.classList.add('active');
+}
+
 function espera (texto){
   console.log(texto);
 }
@@ -13,4 +41,5 @@ for(let i = 0; i < 20 ; i++){
     console.log(i);
   }, 1000);
 }
+*/
 
