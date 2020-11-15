@@ -20,6 +20,12 @@ function callback(){
 }
 
 
+//Exercícios
+function mudarClasse(){
+  document.body.classList.toggle('active');
+}
+
+mudarClasse();
 /*
 function handleClick(){
   console.log(this);
