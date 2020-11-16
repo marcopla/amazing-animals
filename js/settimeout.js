@@ -25,7 +25,7 @@ function mudarClasse(){
   document.body.classList.toggle('active');
 }
 
-mudarClasse();
+setInterval(mudarClasse, 2000);
 /*
 function handleClick(){
   console.log(this);
