@@ -26,6 +26,10 @@ function mudarClasse(){
 }
 
 setInterval(mudarClasse, 2000);
+
+const iniciar = document.querySelector('.iniciar');
+const pausar = document.querySelector('.pausar');
+const tempo = document.querySelector('.tempo');
 /*
 function handleClick(){
   console.log(this);
