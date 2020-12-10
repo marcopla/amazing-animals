@@ -30,11 +30,15 @@
     textarea {
       height: 150px;
     }
+    .invalido {
+      border-color: red;
+    }
   </style>
   <span class="texto">Texto</span>
   <form name="contato" id="contato">
     <label for="nome">Nome</label>
-    <input type="text" name="nome" id="nome">
+    <input type="text" name="nome" id="nome" required>
+    <span class="erro"></span>
     <label for="email">Email</label>
     <span class="erro"></span>
     <input type="email" name="email" id="email" required>
