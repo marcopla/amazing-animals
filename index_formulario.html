@@ -58,6 +58,7 @@
 
     function handleKeyUp(event){
       const target = event.target;
+      document.body.style.backgroundColor = event.target.value;
       if(!target.checkValidity()){
         target.classList.add('invalido');
         contato.nome.setCustomValidity('Esse campo é necessário');
