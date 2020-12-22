@@ -44,37 +44,17 @@
     <input type="email" name="email" id="email" required>
     <label for="textarea">Mensagem</label>
     <textarea name="textarea" id="textarea"></textarea>
-    <select name="cores" id="cores">
-      <option value="blue">azul</option>
-      <option value="red">vermelho</option>
-    </select>
-    <input type="color">
-    <input type="date">
-    <input type="number">
-    <input type="range">
-    <input type="password">
-    <input type="checkbox" value="identidade" id="identidade">
-    <input type="radio" value="guitarra" name="instrumentos">
-    <label for="guitarra">Guitarra</label>
-    <input type="radio" value="baixo" id="baixo" name="instrumentos">
-    <label for="baixo">Baixo</label>
+
   
   </form>
   <script>
     const contato = document.querySelector('#contato');
-    const texto = document.querySelector('.texto');
-    //console.log(contato);
-    //console.log(document.forms[0]);
+    const dados ={};
 
-    function handleKeyUp(event){
-      //document.body.style.backgroundColor = event.target.value;
-      if(event.target.checked){
-        console.log(event.target.value);
-      }
-     
-      //texto.innerText = event.target.value;
+    function handleChange(event){
+    console.log(event.target.name);
     }
-    contato.addEventListener('change', handleKeyUp)
+    contato.addEventListener('change', handleChange);
 
   </script>
 </body>
