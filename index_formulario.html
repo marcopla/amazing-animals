@@ -52,7 +52,7 @@
     const dados ={};
 
     function handleChange(event){
-    console.log(event.target.name);
+    dados[event.target.name] = event.target.value;
     }
     contato.addEventListener('change', handleChange);
 
