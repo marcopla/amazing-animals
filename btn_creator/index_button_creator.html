@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Button Creator</title>
+  <link rel="stylesheet" href="style_btn_creator.css">
   <section class="button-creator">
     <form id="controles">
       <label for="texto">texto</label>
@@ -17,7 +18,7 @@
       <label for="width">width</label>
       <input type="range" name="width" id="width" min="0" max="600">
       <label for="border">border</label>
-      <input type="text" name="border" id="border" min="0" max="600">
+      <input type="text" name="border" id="border">
       <label for="borderRadius">border-radius</label>
       <input type="range" name="borderRadius" id="borderRadius" min="0" max="20">
       <select name="fontFamily" id="fontFamily">
@@ -30,11 +31,12 @@
     </form>
   </section>
   <section class="resultado">
+    <button class="btn">Clique</button>
     <pre><code class="css"></code></pre>
   </section>
   
 </head>
 <body>
-  <script src="script.js"> const controles = document.querySelector('.css')</script>
+  <script src="script_btn_creator.js"></script>
 </body>
 </html>
