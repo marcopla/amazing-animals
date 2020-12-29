@@ -38,3 +38,10 @@ initDropdownMenu();
 initMenuMobile();
 initAnimaNumeros();
 initFuncionamento();
+const controles = document.getElementById('controles');
+const cssText = document.querySelector('.css');
+const btn = document.querySelector( '.btn');
+
+function handleChange(event){
+  console.log(event);
+}
