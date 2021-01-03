@@ -4,18 +4,20 @@ const btn = document.querySelector('.btn');
 controles.addEventListener('change', handleChange);
 
 const handleStyle = {
-  backgroundColor: 'azul', 
+  element: btn, 
   backgroundColor(value){
-    btn.style.backgroundColor = value;
+    this.style.backgroundColor = value;
   },
   height(value){
-    btn.style.height = value +'px';
-  }
+    this.style.height = value +'px';
+  }, 
 }
+
+handleStyle.height(2);
+
 function handleChange(event){
   const name = event.target.name;
   const value = event.target.value;
-  btn.style.backgroundColor = value;
-  console.log(event);
-  console.log(name, value);
+
+  hsndleStyle[name](vale);
 }
