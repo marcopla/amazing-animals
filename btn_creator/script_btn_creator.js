@@ -9,10 +9,10 @@ const handleStyle = {
     this.style.backgroundColor = value;
   },
   height(value){
-    this.style.height = value +'px';
+    this.style.height = value + 'px';
   }, 
   width(value){
-    this.style.width = value +'px';
+    this.style.width = value + 'px';
   },
   texto(value){
     this.element.innerText = value;
@@ -34,11 +34,16 @@ const handleStyle = {
   }
 }
 
-handleStyle.height(2);
+//handleStyle.height(2);
 
 function handleChange(event){
   const name = event.target.name;
   const value = event.target.value;
 
-  handleStyle[name](vale);
+  handleStyle[name](value);
+  showCss();
+}
+
+function showCss(){
+  cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>');
 }
