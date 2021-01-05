@@ -6,13 +6,13 @@ controles.addEventListener('change', handleChange);
 const handleStyle = {
   element: btn, 
   backgroundColor(value){
-    this.style.backgroundColor = value;
+    this.element.style.backgroundColor = value;
   },
   height(value){
-    this.style.height = value + 'px';
+    this.element.style.height = value + 'px';
   }, 
   width(value){
-    this.style.width = value + 'px';
+    this.element.style.width = value + 'px';
   },
   texto(value){
     this.element.innerText = value;
@@ -34,13 +34,12 @@ const handleStyle = {
   }
 }
 
-//handleStyle.height(2);
-
 function handleChange(event){
   const name = event.target.name;
   const value = event.target.value;
 
   handleStyle[name](value);
+  //console.log(name, value);
   showCss();
 }
 
