@@ -43,6 +43,7 @@ function handleChange(event){
   showCss();
 }
 
+localStorage.name = 'Marco';
 function showCss(){
   cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>');
 }
