@@ -40,10 +40,26 @@ function handleChange(event){
 
   handleStyle[name](value);
   //console.log(name, value);
+  saveValues(name, value);
   showCss();
 }
 
-localStorage.name = 'Marco';
+function saveValues(name, value){
+  localStorage[name] = value;
+}
+
+function setValues(){
+  const properties = Object.keys(localStorage);
+
+  properties.forEach(propertie => {
+    handleStyle[propertie](localStorage[propertie]);  
+    controles.elements[propertie].value = localStorage[propertie];
+  });
+  showCss();
+}
+
+setValues();
+
 function showCss(){
   cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>');
 }
