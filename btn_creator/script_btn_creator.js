@@ -63,3 +63,12 @@ setValues();
 function showCss(){
   cssText.innerHTML = '<span>' + btn.style.cssText.split('; ').join(';</span><span>');
 }
+
+const promessa = new Promise(function(resolve, reject){ 
+  let condicao = true;
+  if(condicao){
+    resolve();
+  } else {
+    reject();
+  }
+});
