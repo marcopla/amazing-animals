@@ -67,8 +67,12 @@ function showCss(){
 const promessa = new Promise(function(resolve, reject){ 
   let condicao = true;
   if(condicao){
-    resolve();
+    resolve('resolvido.');
   } else {
-    reject();
+    reject(Error('Um erro ocorreu na promisse.'));
   }
+});
+
+promessa.then(function(resolucao){
+  console.log(resolucao);
 });
