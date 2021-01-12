@@ -67,12 +67,16 @@ function showCss(){
 const promessa = new Promise(function(resolve, reject){ 
   let condicao = true;
   if(condicao){
-    resolve({nome: 'Marco', idade: 37, sexo: 'M'});
+    setTimeout(() => {
+      resolve({nome: 'Marco', idade: 37, sexo: 'M'});
+    },1000);
   } else {
     reject(Error('Um erro ocorreu na promisse.'));
   }
 });
 
-promessa.then(function(resolucao){
+const retorno = promessa.then( resolucao => 'teste').then(resolucao =>{
   console.log(resolucao);
 });
+
+console.log(retorno);
