@@ -83,9 +83,9 @@ const retorno = promessa
 })
 .then(resolucao =>{
   console.log(resolucao);
-})
-.catch(rejeitada => {
+}, rejeitada => {
   console.log(rejeitada)
-});
+})
+.finally(() => console.log('finally executado'));
 
 console.log(retorno);
