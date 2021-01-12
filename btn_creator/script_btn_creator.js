@@ -65,7 +65,7 @@ function showCss(){
 }
 
 const promessa = new Promise(function(resolve, reject){ 
-  let condicao = true;
+  let condicao = false;
   if(condicao){
     setTimeout(() => {
       resolve({nome: 'Marco', idade: 37, sexo: 'M'});
@@ -75,8 +75,17 @@ const promessa = new Promise(function(resolve, reject){
   }
 });
 
-const retorno = promessa.then( resolucao => 'teste').then(resolucao =>{
+const retorno = promessa
+.then( resolucao => {
+  console.log(resolucao); 
+  resolucao.profissao = 'Designer';
+  return resolucao;
+})
+.then(resolucao =>{
   console.log(resolucao);
+})
+.catch(rejeitada => {
+  console.log(rejeitada)
 });
 
 console.log(retorno);
