@@ -88,4 +88,22 @@ const retorno = promessa
 })
 .finally(() => console.log('finally executado'));
 
+const login = new Primisse(resolve => {
+  setTimeout(() => {
+    resolve('Login Efetuado');
+  }, 1000);
+});
+
+const dados = new Promisse(resolve => {
+  setTimeout(() => {
+    resolve('Dados carregados');
+  }, 1500);
+});
+
+const tudoCarregado = Promisse.all([login, dados]);
+
+tudoCarregado.then(respostas => {
+  console.log(respostas);
+})
+
 console.log(retorno);
