@@ -1,43 +1,21 @@
-const promessa = new Promise(function(resolve, reject){ 
-  let condicao = true;
-  if(condicao){
-    setTimeout(() => {
-      resolve({nome: 'Marco', idade: 37, sexo: 'M'});
-    },1000);
-  } else {
-    reject(Error('Um erro ocorreu na promise.'));
-  }
+/*
+const doc = fetch('./doc.txt'); // é uma promise
+
+doc
+.then(response => response.text())
+.then((body) => {
+  const conteudo = document.querySelector('.conteudo');
+  conteudo.innerText = body;
+  console.log(body);
 });
 
-const retorno = promessa
-.then( resolucao => {
-  console.log(resolucao); 
-  resolucao.profissao = 'Designer';
-  return resolucao;
-})
-.then(resolucao =>{
-  console.log(resolucao);
-}, rejeitada => {
-  console.log(rejeitada)
-})
-.finally(() => console.log('finally executado'));
+*/
 
-const login = new Promise(resolve => {
-  setTimeout(() => {
-    resolve('Login Efetuado');
-  }, 1000);
+const cep = fetch('https://viacep.com.br/ws/01001000/json/');
+
+cep
+.then(r => r.json())
+.then((body) => {
+  const conteudo = document.querySelector('.conteudo');
+  conteudo.innerText = body.logradouro;
 });
-
-const dados = new Promise(resolve => {
-  setTimeout(() => {
-    resolve('Dados carregados');
-  }, 1500);
-});
-
-const tudoCarregado = Promise.all([login, dados]);
-
-tudoCarregado.then(respostas => {
-  console.log(respostas);
-})
-
-console.log(retorno);
