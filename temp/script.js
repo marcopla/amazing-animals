@@ -38,6 +38,7 @@ sobre
 });
 
 */
+
 /* Blob
 const imagem = fetch('./image.png');
 
@@ -68,6 +69,7 @@ imagem
   console.log(body);
 });
 */
+
 /* .headers.forEach(console.log)
 const cep = fetch('https://viacep.com.br/ws/01001000/json/');
 cep
@@ -76,12 +78,17 @@ cep
 });
 */
 
+ /*response.status url type
 const cep = fetch('https://viacep.com.br/ws/01001000/json/');
 cep
 .then(response => {
   console.log(response.status);
+  console.log(response.url);
+  console.log(response.type); //basic é do próprio servidor, cors é de fora, se for acessar o site do google vai dar erro, pois ele não aceita acesso externo.
   
   if(response.status === 404){
     console.log('Página não existe.');
   }
 });
+*/
+
