@@ -44,5 +44,6 @@ const imagem = fetch('./image.png');
 imagem
 .then(r => r.blob())
 .then(body =>{
-  
+  const blobUrl = URL.createObjectURL(body);
+  const imagemDom = document.querySelector('img');
 })
