@@ -50,6 +50,7 @@ imagem
 });
 */
 
+/* .clone()
 const imagem = fetch('https://viacep.com.br/ws/01001000/json/');
 
 imagem
@@ -65,4 +66,22 @@ imagem
 })
 .then(body => {
   console.log(body);
+});
+*/
+/* .headers.forEach(console.log)
+const cep = fetch('https://viacep.com.br/ws/01001000/json/');
+cep
+.then(response => {
+  response.headers.forEach(console.log)
+});
+*/
+
+const cep = fetch('https://viacep.com.br/ws/01001000/json/');
+cep
+.then(response => {
+  console.log(response.status);
+  
+  if(response.status === 404){
+    console.log('Página não existe.');
+  }
 });
