@@ -38,7 +38,7 @@ sobre
 });
 
 */
-
+/* Blob
 const imagem = fetch('./image.png');
 
 imagem
@@ -46,4 +46,23 @@ imagem
 .then(body =>{
   const blobUrl = URL.createObjectURL(body);
   const imagemDom = document.querySelector('img');
+  imagemDom.src = blobUrl;
+});
+*/
+
+const imagem = fetch('https://viacep.com.br/ws/01001000/json/');
+
+imagem
+.then(response => {
+  response2 = response.clone();
+
+  response.text();
+  //console.log(response);
+
+  response2.json()
+  .then(body => console.log(body));
+  console.log(response2);
 })
+.then(body => {
+  console.log(body);
+});
