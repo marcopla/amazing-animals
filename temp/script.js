@@ -78,7 +78,8 @@ cep
 });
 */
 
- /*response.status url type ok
+/*
+ //response.status url type ok
 const cep = fetch('https://viacep.com.br/ws/01001000/json/');
 cep
 .then(response => {
@@ -92,4 +93,8 @@ cep
   }
 });
 */
+
+
+
+
 
