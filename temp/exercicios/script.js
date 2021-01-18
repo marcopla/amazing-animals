@@ -1,5 +1,8 @@
 const form = document.querySelector('form');
 const valorBitcoin = document.querySelector('#valor-bitcoin');
+const chuckJoke = document.querySelector('#joke');
+const btnNextJoke = document.querySelector('#btn-next-joke');
+btnNextJoke.addEventListener('click', chuckNorrisJokes);
 
 function cep(form){
   form.addEventListener('change', handleChangeForm);
@@ -33,10 +36,17 @@ function bitcoin(){
 function chuckNorrisJokes(){
 
   const joke = fetch('https://api.chucknorris.io/jokes/random');
-  
-}
-cep(form);
-setInterval(bitcoin, 30000);
 
+  joke
+  .then(joke => joke.json())
+  .then(body => {
+    chuckJoke.innerText = body.value;
+  } )
+}
+
+cep(form);
+bitcoin();
+setInterval(bitcoin, 30000);
+chuckNorrisJokes();
 
 
