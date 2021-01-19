@@ -50,3 +50,10 @@ setInterval(bitcoin, 30000);
 chuckNorrisJokes();
 
 
+//JSON
+
+{
+  "id": 1,
+  "nome": "Marco",
+  "email": "marco.pla@gmail.com"
+}
