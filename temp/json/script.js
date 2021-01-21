@@ -1,7 +1,10 @@
 const cursos = fetch('./dados.json');
 
+/* Antes do método Json
 cursos
-.then(response => response.json())
-.then(body => {
-  console.log(body);
-})
+.then(r => r.text())
+.then(jsonText => {
+  const jsonFinal = JSON.parse(jsonText);
+  console.log(jsonFinal);
+});
+*/
