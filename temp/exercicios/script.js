@@ -1,7 +1,8 @@
-const form = document.querySelector('form');
-const valorBitcoin = document.querySelector('#valor-bitcoin');
-const chuckJoke = document.querySelector('#joke');
-const btnNextJoke = document.querySelector('#btn-next-joke');
+const form = document.querySelector('form'),
+  valorBitcoin = document.querySelector('#valor-bitcoin'),
+  chuckJoke = document.querySelector('#joke'),
+  btnNextJoke = document.querySelector('#btn-next-joke');
+
 btnNextJoke.addEventListener('click', chuckNorrisJokes);
 
 function cep(form){
@@ -50,10 +51,3 @@ setInterval(bitcoin, 30000);
 chuckNorrisJokes();
 
 
-//JSON
-
-{
-  "id": 1,
-  "nome": "Marco",
-  "email": "marco.pla@gmail.com"
-}
