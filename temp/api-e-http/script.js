@@ -1,12 +1,10 @@
-const url = 'http://jsonplaceholder.typicode.com/posts';
+//const url = 'https://cors-anywhere.herokuapp.com/https://www.goggle.com';
+const url = 'https://google.com'
 
-const options = {
-  method: 'HEAD',
-
-  }
-
-fetch(url, options)
+fetch(url)
 .then(response => {
-  response.headers.forEach(header => console.log(header))
+
+  console.log(  response.text())
 })
+
 
