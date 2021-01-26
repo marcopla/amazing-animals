@@ -1,10 +1,6 @@
-//const url = 'https://cors-anywhere.herokuapp.com/https://www.goggle.com';
-const url = 'https://google.com'
+async function puxarDados(){}
 
-fetch(url)
-.then(response => {
-
-  console.log(  response.text())
-})
-
-
+const responseDados = await fetch('./dados.json')
+console.log(responseDados)
+}
+puxarDados()
