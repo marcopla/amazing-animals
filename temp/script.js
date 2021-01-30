@@ -1,51 +1,38 @@
-function Button(text, background){
-  this.text = text;
-  this.background = background;
+const button = {
+  get tamanho(){
+    return this._numero || 100;
+  },
+  set tamanho(numero) {
+    this._numero = numero * 200;
+  }
 }
 
-Button.prototype.element = function() {
-  const buttonElement = document.createElement('button');
-  buttonElement.innerText = this.text;
-  buttonElement.style.background = this.background; 
-  return buttonElement;
+const frutas = {
+  lista:[],
+  set nova(fruta){
+    this.lista.push(fruta);
+  } 
 }
-static 
 
 
+frutas.nova = 'banana';
+frutas.nova = 'amora';
 
+class Button {
+  constructor(text, color) {
+    this.text = text;
+    this.color = color;
+  }
+  get element(){
+    const type = this._elementType || 'button';
+    const buttonElement = document.createElement(type);
+    buttonElement.innerText = this.text;
+    buttonElement.style.color = this.color;
+    return buttonElement;
+  }
+  set element(type){
+    this._elementType = type;
+  }
+}
 
-
-
-// class Button {
-//   constructor(text, background,color) {
-//     this.text = text;
-//     this.background = background;
-//     this.color = color;
-//   }
-//   element(){
-//     const buttonElement = document.createElement('button');
-//     buttonElement.innerText = this.text;
-//     buttonElement.style.background = this.background; 
-//     buttonElement.style.color = this.color;
-//     return buttonElement;
-//   }
-//   appendTo(target){
-//     const targetElement = document.querySelector(target);
-//     targetElement.appendChild(this.element());
-//     return targetElement;
-//   }
-//   static createButton(text, background) {
-//     const buttonElement = document.createElement('button');
-//     buttonElement.innerText = text;
-//     buttonElement.style.background = background;
-//     return buttonElement;
-//   }
-// }
-
-// const buttonBlue = new Button('Comprar', 'blue', 'white'); 
-
-// buttonBlue.appendTo('body');
-
-// const redButtonStatic = Button.createButton('Click aqui', 'red');
-
-// console.log(redButtonStatic);
+const blueButton = new Button('Comprar', 'blue');
