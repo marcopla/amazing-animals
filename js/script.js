@@ -1,14 +1,4 @@
-// const div = document.querySelector('[data-cor]');
-
-// div.dataset.height = 1000;
-
-// delete div.dataset.width;
-
-// div.dataset.totalHeight = 2000;
-
-// console.log(div.dataset)
-
-import initScrollSuave from './modules/scroll-suave.js';
+import ScrollSuave from './modules/scroll-suave.js';
 import initAnimacaoScroll from './modules/animacao-scroll.js';
 import initAccordion from './modules/accordion.js';
 import initTabNav from './modules/tabnav.js';
@@ -22,13 +12,9 @@ import initFuncionamento from './modules/funcionamento.js';
 import initFetchAnimais from './modules/fetch-animais.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
 
-teste();
-testando2();
+const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^= "#"');
+scrollSuave.init();
 
-tudo.cumprimenta();
-console.log(tudo.senha);
-
-initScrollSuave();
 initAnimacaoScroll();
 initAccordion();
 initTabNav();
