@@ -4,7 +4,7 @@ import initAnimacaoScroll from './modules/animacao-scroll.js';
 import TabNav from './modules/tabnav.js';
 import { testando as teste, testando2 } from './modules/teste.js';
 import * as tudo from './modules/teste2.js';
-import initModal from './modules/modal.js';
+import Modal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
@@ -21,8 +21,10 @@ accordion.init();
 const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
 tabNav.init();
 
+const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
+modal.init();
+
 initAnimacaoScroll();
-initModal();
 initTooltip();
 initDropdownMenu();
 initMenuMobile();
