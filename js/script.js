@@ -1,6 +1,6 @@
 import ScrollSuave from './modules/scroll-suave.js';
 import Accordion from './modules/accordion.js';
-import initAnimacaoScroll from './modules/animacao-scroll.js';
+import ScrollAnima from './modules/scroll-anima.js';
 import TabNav from './modules/tabnav.js';
 import { testando as teste, testando2 } from './modules/teste.js';
 import * as tudo from './modules/teste2.js';
@@ -27,9 +27,14 @@ modal.init();
 const toolTip = new Tooltip('[data-tooltip]');
 toolTip.init();
 
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]',);
+scrollAnima.init();
+
+
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://www.blockchain.com/ticker', '.btc-preco');
-initAnimacaoScroll();
+
+
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
