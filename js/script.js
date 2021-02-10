@@ -7,7 +7,7 @@ import * as tudo from './modules/teste2.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
-import initMenuMobile from './modules/menu-mobile.js';
+import MenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
@@ -27,12 +27,14 @@ modal.init();
 const toolTip = new Tooltip('[data-tooltip]');
 toolTip.init();
 
-const scrollAnima = new ScrollAnima('[data-anime="scroll"]',);
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]');
 scrollAnima.init();
 
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://www.blockchain.com/ticker', '.btc-preco');
 
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initDropdownMenu();
-initMenuMobile();
 initFuncionamento();
