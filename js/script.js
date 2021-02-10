@@ -30,12 +30,9 @@ toolTip.init();
 const scrollAnima = new ScrollAnima('[data-anime="scroll"]',);
 scrollAnima.init();
 
-
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://www.blockchain.com/ticker', '.btc-preco');
-
 
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
-
