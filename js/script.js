@@ -7,10 +7,10 @@ import * as tudo from './modules/teste2.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
 import MenuMobile from './modules/menu-mobile.js';
-import initFuncionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import DropdownMenu from './modules/dropdown-menu.js';
+import Funcionamento from './modules/funcionamento.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^= "#"');
 scrollSuave.init();
@@ -39,4 +39,5 @@ menuMobile.init();
 const dropdownMenu = new DropdownMenu('[data-dropdown]', ['touchstart', 'click']);
 dropdownMenu.init();
 
-initFuncionamento();
+const funcionamento = new Funcionamento('[data-semana]', 'aberto');
+funcionamento.init();
