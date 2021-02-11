@@ -6,11 +6,11 @@ import { testando as teste, testando2 } from './modules/teste.js';
 import * as tudo from './modules/teste2.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initDropdownMenu from './modules/dropdown-menu.js';
 import MenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
+import DropdownMenu from './modules/dropdown-menu.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^= "#"');
 scrollSuave.init();
@@ -36,5 +36,7 @@ fetchBitcoin('https://www.blockchain.com/ticker', '.btc-preco');
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initDropdownMenu();
+const dropdownMenu = new DropdownMenu('[data-dropdown]', ['touchstart', 'click']);
+dropdownMenu.init();
+
 initFuncionamento();
