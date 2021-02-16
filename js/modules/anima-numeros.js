@@ -19,11 +19,13 @@ export default class AnimaNumeros {
         numero.innerText = total;
         clearInterval(timer);
       }
-    }, 25 * Math.random());
+    }, 25);
   }
 
   animaNumeros() {
-    this.numeros.forEach((numero) => this.constructor.incrementarNumero(numero));
+    this.numeros.forEach((numero) => {
+      this.constructor.incrementarNumero(numero);
+    });
   }
 
   // Função executada quando a mutação ocorrer
